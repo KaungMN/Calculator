@@ -4,43 +4,86 @@
       "id": 1,
       "title": "Senior React Developer",
       "salary": 50000,
-      "location": "London, UK"
+      "location": "London, UK",
+      "description": "We are seeking an experienced Senior React Developer to join our dynamic team. The ideal candidate should have a strong background in React development, a passion for creating efficient and scalable web applications, and the ability to lead and mentor junior developers. If you thrive in a fast-paced environment and love tackling complex challenges, we'd love to hear from you.",
+      "requirements": [
+        "5+ years of experience in React development",
+        "Strong knowledge of JavaScript, HTML, and CSS",
+        "Experience with state management libraries (e.g., Redux)",
+        "Excellent problem-solving and debugging skills"
+      ]
     },
     {
       "id": 2,
       "title": "Plumber",
       "salary": 40000,
-      "location": "Bowser's Castle"
+      "location": "Bowser's Castle",
+      "description": "Join the plumbing team at Bowser's Castle and ensure the smooth operation of the plumbing system in this iconic location. This role involves maintaining and repairing pipes, drains, and plumbing fixtures. Experience in castle plumbing is preferred, but all skilled plumbers are encouraged to apply.",
+      "requirements": [
+        "Certification in plumbing",
+        "Experience in plumbing maintenance and repair",
+        "Ability to work in a fast-paced castle environment"
+      ]
     },
     {
       "id": 3,
       "title": "Gym Leader",
       "salary": 75000,
-      "location": "Kanto Region"
+      "location": "Kanto Region",
+      "description": "Become a Gym Leader in the Kanto Region and showcase your Pokémon battling skills. As a Gym Leader, you'll be responsible for managing and leading a Pokémon Gym, challenging trainers, and maintaining a strong team of Pokémon. If you're a skilled Pokémon Trainer with a passion for leadership, apply now!",
+      "requirements": [
+        "Expertise in Pokémon battling and strategy",
+        "Strong leadership and communication skills",
+        "Knowledge of Pokémon types and moves"
+      ]
     },
     {
       "id": 4,
       "title": "Vue Developer",
       "salary": 40000,
-      "location": "Liverpool, UK"
+      "location": "Liverpool, UK",
+      "description": "We are looking for a talented Vue.js Developer to join our development team in Liverpool. The ideal candidate should have a solid understanding of Vue.js and front-end technologies, as well as a passion for creating visually appealing and responsive web applications.",
+      "requirements": [
+        "2+ years of experience in Vue.js development",
+        "Proficiency in HTML, CSS, and JavaScript",
+        "Experience with RESTful API integration"
+      ]
     },
     {
       "id": 5,
       "title": "Tutorial Maker",
       "salary": 35000,
-      "location": "Manchester, UK"
+      "location": "Manchester, UK",
+      "description": "Join our team in Manchester as a Tutorial Maker and contribute to creating engaging and informative tutorials. The role involves researching, scripting, and producing tutorials on various subjects. If you have a knack for explaining complex concepts in a simple and understandable way, we want to hear from you!",
+      "requirements": [
+        "Excellent communication and presentation skills",
+        "Experience in tutorial creation or content development",
+        "Passion for sharing knowledge with others"
+      ]
     },
     {
       "id": 6,
       "title": "Website Manager",
       "salary": 50000,
-      "location": "Berlin, Germany"
+      "location": "Berlin, Germany",
+      "description": "We are seeking a Website Manager to oversee the performance and functionality of our website. The ideal candidate should have experience in web management, content strategy, and user experience optimization. Join our international team in Berlin and contribute to the success of our online presence.",
+      "requirements": [
+        "Proven experience in website management",
+        "Knowledge of content management systems (CMS)",
+        "Understanding of SEO best practices"
+      ]
     },
     {
       "id": 7,
       "title": "Food Tester",
       "salary": 30000,
-      "location": "London, UK"
+      "location": "London, UK",
+      "description": "Become a Food Tester in the vibrant city of London! As a Food Tester, you'll have the exciting opportunity to sample and provide feedback on a variety of culinary delights. If you have a passion for food and a discerning palate, apply now and be part of the taste-testing team.",
+      "requirements": [
+        "Passion for food and a willingness to try new dishes",
+        "Attention to detail and ability to articulate flavors",
+        "Ability to work in a team environment"
+      ]
     }
   ]
 }
