@@ -15,7 +15,7 @@ export default function CareerDetails() {
       </div>
       <div className="details">
         <h3>Requirements</h3>
-        <div>{career.requirements.map((req) => `• ${req} `)}</div>
+        <div>{career.requirements}</div>
       </div>
     </div>
   );
@@ -24,5 +24,8 @@ export default function CareerDetails() {
 export const careerDetailsLoader = async ({ params }) => {
   const { id } = params;
   const res = await fetch("http://localhost:4000/careers/" + id);
+  if (!res.ok) {
+    throw Error("Could not find that career.");
+  }
   return res.json();
 };
