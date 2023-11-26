@@ -1,4 +1,5 @@
 import { useLoaderData, Link, useNavigate, NavLink } from "react-router-dom";
+import axios from "../../services/AxiosAPI";
 function Careers() {
   const careers = useLoaderData();
   const nagivate = useNavigate();
@@ -48,10 +49,28 @@ function Careers() {
 
 export default Careers;
 
-export const careerLoader = async () => {
-  const res = await fetch("http://localhost:4000/careers");
-  if (!res.ok) {
-    throw Error("Could not fetch the list of careers");
-  }
-  return res.json();
+// export const careerLoader = async () => {
+//   const res = await fetch("http://localhost:4000/careers");
+//   if (!res.ok) {
+//     throw Error("Could not fetch the list of careers");
+//   }
+//   return res.json();
+// };
+
+export const careerLoader = () => {
+  // Make a request for a user with a given ID
+  const res = axios
+    .get("http://localhost:4000/careers")
+    .then((response) => {
+      console.log(response.data);
+      return response;
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .finally(function () {
+      // always executed
+    });
+  return res;
 };

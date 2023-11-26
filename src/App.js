@@ -4,10 +4,10 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Faq from "./pages/help/Faq";
-import Contact from "./pages/help/Contact";
+import Home from "pages/Home";
+import About from "pages/About";
+import Faq from "pages/help/Faq";
+import Contact from "pages/help/Contact";
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
 import Notfound from "./pages/Notfound";

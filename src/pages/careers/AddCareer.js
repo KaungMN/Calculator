@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "../../services/AxiosAPI";
 
 export default function AddCareer() {
   const [input, setInput] = useState({});
@@ -12,17 +13,28 @@ export default function AddCareer() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:4000/careers", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(input),
-    })
-      .then((res) => {
-        alert("Saved successfully.");
+    // fetch("http://localhost:4000/careers", {
+    //   method: "POST",
+    //   headers: { "content-type": "application/json" },
+    //   body: JSON.stringify(input),
+    // })
+    //   .then((res) => {
+    //     alert("Saved successfully.");
+    //     navigate("/career");
+    //   })
+    //   .catch((err) => {
+    //     console.log(err.message);
+    //   });
+
+    axios
+      .post("http://localhost:4000/careers", input)
+      .then(function (response) {
+        console.log(response);
+        alert("Saved success!");
         navigate("/career");
       })
-      .catch((err) => {
-        console.log(err.message);
+      .catch(function (error) {
+        console.log(error);
       });
   };
   return (

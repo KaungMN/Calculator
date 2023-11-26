@@ -1,11 +1,11 @@
 {
   "careers": [
     {
-      "title": "Google",
-      "salary": "10000000000",
-      "location": "Yangon, Myanmar",
-      "description": "To do all Google Jobs",
-      "requirements": "100 years exp",
+      "title": "Service",
+      "salary": "500000",
+      "location": "Bago, Myanmar",
+      "description": "Plumbing",
+      "requirements": "1 year experience",
       "id": 1
     },
     {
@@ -63,6 +63,38 @@
       "description": "Front-end Developer",
       "requirements": "1 year experience",
       "id": 8
+    },
+    {
+      "title": "Graphic Designer",
+      "salary": "800000",
+      "location": "Mandalay, Myanmar",
+      "description": "To design all social media post",
+      "requirements": "2 years experience",
+      "id": 10
+    },
+    {
+      "title": "Dev",
+      "salary": "500000",
+      "location": "Tokyo, Japan",
+      "description": "Web Developer",
+      "requirements": "1 year experience",
+      "id": 11
+    },
+    {
+      "title": "Google",
+      "salary": "69999999",
+      "location": "England",
+      "description": "Google Dev",
+      "requirements": "3 year experience",
+      "id": 12
+    },
+    {
+      "title": "Google",
+      "salary": "dsafj;saj",
+      "location": "fda;jg;sajd",
+      "description": "j;ajd;gkj",
+      "requirements": "j;dfad",
+      "id": 13
     }
   ]
 }
