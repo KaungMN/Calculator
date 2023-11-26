@@ -22,6 +22,7 @@ import ProfileLayout from "./layouts/ProfileLayout";
 import Profile from "./pages/Profile/Profile";
 import Dashboard from "./pages/Profile/Dashboard";
 import AddCareer from "./pages/careers/AddCareer";
+import UpdateCareer from "./pages/careers/UpdateCareer";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -44,6 +45,7 @@ const router = createBrowserRouter(
           loader={careerDetailsLoader}
         />
         <Route path="add_career" element={<AddCareer />} />
+        <Route path="update_career" element={<UpdateCareer />} />
       </Route>
       <Route path="profile_layout" element={<ProfileLayout />}>
         <Route path="profile" element={<Profile />} />

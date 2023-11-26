@@ -1,7 +1,7 @@
-import { useLoaderData, Link } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+import { useLoaderData, Link, useNavigate, NavLink } from "react-router-dom";
 function Careers() {
   const careers = useLoaderData();
+  const nagivate = useNavigate();
   const handleDelete = (id) => {
     fetch("http://localhost:4000/careers/" + id, {
       method: "DELETE",
@@ -10,7 +10,7 @@ function Careers() {
     })
       .then((res) => {
         alert("Deleted successfully.");
-        <Navigate to="/" replace={true} />;
+        nagivate("/");
       })
       .catch((err) => {
         console.log(err.message);
@@ -30,7 +30,9 @@ function Careers() {
           </div>
 
           <div>
-            <button className="career-root-input">Update</button>
+            <NavLink to="update_career">
+              <button className="career-root-input">Update</button>
+            </NavLink>
             <button
               className="career-root-input"
               onClick={() => handleDelete(career.id)}

@@ -1,12 +1,12 @@
 {
   "careers": [
     {
-      "id": 1,
-      "title": "Senior React Developer",
-      "salary": 50000,
-      "location": "London, UK",
-      "description": "We are seeking an experienced Senior React Developer to join our dynamic team. The ideal candidate should have a strong background in React development, a passion for creating efficient and scalable web applications, and the ability to lead and mentor junior developers. If you thrive in a fast-paced environment and love tackling complex challenges, we'd love to hear from you.",
-      "requirements": "5+ years of experience in React development, Strong knowledge of JavaScript, HTML, and CSS, Experience with state management libraries (e.g., Redux), Excellent problem-solving and debugging skills"
+      "title": "Google",
+      "salary": "10000000000",
+      "location": "Yangon, Myanmar",
+      "description": "To do all Google Jobs",
+      "requirements": "100 years exp",
+      "id": 1
     },
     {
       "id": 2,
