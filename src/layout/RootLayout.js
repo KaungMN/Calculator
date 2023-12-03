@@ -11,6 +11,7 @@ function RootLayout() {
         <div className="nav-container">
           <nav>
             <NavLink to="/">Home</NavLink>
+            <NavLink to="example">Bootstrap</NavLink>
             <NavLink to="blog">Blog</NavLink>
             <NavLink to="profile">Profile</NavLink>
             <Signout />

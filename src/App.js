@@ -2,6 +2,8 @@ import React from "react";
 import { router } from "AppRouter";
 import { RouterProvider } from "react-router-dom";
 import { AuthProvider } from "auth/AuthProvider";
+import "../node_modules/react-bootstrap/dist/react-bootstrap";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (

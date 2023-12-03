@@ -15,6 +15,7 @@ import AddBlog from "pages/Blog/AddBlog";
 import NotFound from "pages/Blog/NotFound";
 import BlogList from "pages/Blog/BlogList";
 import UpdateBlog from "pages/Blog/UpdateBlog";
+import Bootstrap from "pages/Bootstrap";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +31,7 @@ export const router = createBrowserRouter(
           <Route path=":id" element={<BlogDetail />} />
           <Route path="update_blog:id" element={<UpdateBlog />} />
         </Route>
+        <Route path="example" element={<Bootstrap />} />
         <Route path="profile" element={<Profile />} />
         <Route path="log-in" element={<Login />} />
         <Route path="sign-up" element={<Signup />} />
