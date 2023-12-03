@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "services/LoginAxios";
+import { useAuth } from "auth/AuthProvider";
 
-export default function AddCareer() {
+export default function UpdateBlog() {
+  const auth = useAuth();
+  const isAuthenticated = auth.isAuthenticated;
   const [input, setInput] = useState({});
   const navigate = useNavigate();
   const handleOnChange = (event) => {
@@ -12,23 +16,27 @@ export default function AddCareer() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:4000/careers", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(input),
-    })
-      .then((res) => {
-        alert("Saved successfully.");
-        navigate("/career");
+
+    if (isAuthenticated === false) {
+      alert("You cannot add the blog. Please Sign-in");
+      return;
+    }
+
+    axios
+      .put("http://localhost:4000/blogs/1", input)
+      .then(function (response) {
+        console.log(response);
+        alert("Saved success!");
+        navigate("/blog");
       })
-      .catch((err) => {
-        console.log(err.message);
+      .catch(function (error) {
+        console.log(error);
       });
   };
   return (
-    <div className="add-career">
+    <div className="add-blog">
       <form onSubmit={handleSubmit}>
-        <h2>Add your career</h2>
+        <h2 style={{ textAlign: "center" }}>Update your Blog</h2>
         <br />
         <label>Title :</label>
         <input
@@ -38,35 +46,35 @@ export default function AddCareer() {
           onChange={handleOnChange}
         />
         <br />
-        <label>Salary :</label>
+        <label>Content :</label>
         <input
-          name={"salary"}
+          name={"content"}
           type="text"
-          value={input.salary || ""}
+          value={input.content || ""}
           onChange={handleOnChange}
         />
         <br />
-        <label>Location :</label>
+        <label>Categories :</label>
         <input
-          name={"location"}
+          name={"categories"}
           type="text"
-          value={input.location || ""}
+          value={input.categories || ""}
           onChange={handleOnChange}
         />
         <br />
-        <label>Description :</label>
+        <label>Publication Date :</label>
         <input
-          name={"description"}
+          name={"publicationDate"}
           type="text"
-          value={input.description || ""}
+          value={input.publicationDate || ""}
           onChange={handleOnChange}
         />
         <br />
-        <label>Requirements :</label>
+        <label>Author :</label>
         <input
-          name={"requirements"}
+          name={"author"}
           type="text"
-          value={input.requirements || ""}
+          value={input.author || ""}
           onChange={handleOnChange}
         />
         <br />
