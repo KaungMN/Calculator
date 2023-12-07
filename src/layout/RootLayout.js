@@ -1,8 +1,6 @@
-import Signout from "pages/Signout";
 import React from "react";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
-import LoginStatus from "pages/Login/LoginStatus";
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Outlet, useLocation } from "react-router-dom";
+import { Container, Navbar, Nav } from "react-bootstrap";
 
 function RootLayout() {
   const location = useLocation();
@@ -11,17 +9,17 @@ function RootLayout() {
       <header>
         <Navbar bg="white" expand="sm" variant="white">
           <Container>
-            <Navbar.Brand className="fs-2" href="/">
-              KMN's Blog
+            <Navbar.Brand className="fs-2 fw-bold" href="/">
+              KMN'S BLOG
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse className="justify-content-end" id="navbarScroll">
               <Nav className="nav-underline">
                 <Nav.Link
                   className={`fs-5 ${
-                    location.pathname === "/blog" ? "active" : ""
+                    location.pathname === "/" ? "active" : ""
                   }`}
-                  href="/blog"
+                  href="/"
                 >
                   Blog
                 </Nav.Link>

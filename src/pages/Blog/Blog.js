@@ -76,9 +76,9 @@ function Blog() {
       <Container className="my-container">
         <Row>
           {blogCards.map((card) => (
-            <Col xs={12} md={6}>
+            <Col xs={12} md={6} className="my-2">
               <Link
-                to="/about"
+                to="blog-detail-1"
                 className="col-lg"
                 style={{ textDecoration: "none" }}
               >
@@ -93,6 +93,42 @@ function Blog() {
           ))}
         </Row>
       </Container>
+      <div className="bg-dark text-light text-center blog-footer-container mt-5">
+        <p className="banner-text">
+          <b>DIGITAL DESIGN</b> UI/UX DESIGN <b>CREATIVE WORK</b> BOOTSTRAP{" "}
+          <b>REACT</b> FRONT-END DEVELOPMENT <b>USER INTERFACES</b> RESPONSIVE
+          DESIGN <b>DIGITAL DESIGN</b> UI/UX DESIGN <b>CREATIVE WORK</b>{" "}
+          BOOTSTRAP <b>REACT</b> FRONT-END DEVELOPMENT <b>USER INTERFACES</b>{" "}
+          RESPONSIVE DESIGN
+        </p>
+        <div className="w-75 mx-auto mt-5 mb-2">
+          <h3>KMN'S BLOG</h3>
+          <p className="blog-footer-text">
+            Embark on a journey of React and Bootstrap mastery with KMN's Blog.
+            Explore the art of building dynamic, responsive web applications
+            through insightful tutorials, hands-on experiences, and the joy of
+            continuous learning. Let's code, create, and conquer the world of
+            modern web development together!
+          </p>
+        </div>
+        <div>
+          <a href="https://twitter.com/" className="mx-3 blog-footer-link">
+            Twitter
+          </a>
+          <a href="https://google.com/" className="mx-3 blog-footer-link">
+            Google
+          </a>
+          <a href="https://facebook.com/" className="mx-3 blog-footer-link">
+            Facebook
+          </a>
+        </div>
+        <footer class="bg-dark text-light py-4">
+          <div class="footer-container">
+            <p class="mb-0 blog-footer-text">© 2012–2020 KMN Co.</p>
+            <p class="mb-0 blog-footer-text">All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
     </>
   );
 }
