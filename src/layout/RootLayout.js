@@ -1,28 +1,63 @@
 import Signout from "pages/Signout";
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import LoginStatus from "pages/Login/LoginStatus";
+import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 function RootLayout() {
+  const location = useLocation();
   return (
-    <div>
-      <h1 style={{ textAlign: "center", fontSize: "40px" }}>KMN's Blog</h1>
+    <>
       <header>
-        <div className="nav-container">
-          <nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="example">Bootstrap</NavLink>
-            <NavLink to="blog">Blog</NavLink>
-            <NavLink to="profile">Profile</NavLink>
-            <Signout />
-          </nav>
-          <LoginStatus />
-        </div>
+        <Navbar bg="white" expand="sm" variant="white">
+          <Container>
+            <Navbar.Brand className="fs-2" href="/">
+              KMN's Blog
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse className="justify-content-end" id="navbarScroll">
+              <Nav className="nav-underline">
+                <Nav.Link
+                  className={`fs-5 ${
+                    location.pathname === "/blog" ? "active" : ""
+                  }`}
+                  href="/blog"
+                >
+                  Blog
+                </Nav.Link>
+                <Nav.Link
+                  className={`fs-5 ${
+                    location.pathname === "/about" ? "active" : ""
+                  }`}
+                  href="/about"
+                >
+                  About
+                </Nav.Link>
+                <Nav.Link
+                  className={`fs-5 ${
+                    location.pathname === "/link" ? "active" : ""
+                  }`}
+                  href="/link"
+                >
+                  Link
+                </Nav.Link>
+                <Nav.Link
+                  className={`fs-5 ${
+                    location.pathname === "/project" ? "active" : ""
+                  }`}
+                  href="/project"
+                >
+                  Project
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
       </header>
       <main>
         <Outlet />
       </main>
-    </div>
+    </>
   );
 }
 

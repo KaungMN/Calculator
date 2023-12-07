@@ -16,23 +16,24 @@ import NotFound from "pages/Blog/NotFound";
 import BlogList from "pages/Blog/BlogList";
 import UpdateBlog from "pages/Blog/UpdateBlog";
 import Bootstrap from "pages/Bootstrap";
+import Project from "pages/Project";
+import Link from "pages/Link";
+import About from "pages/About";
+import Blog from "pages/Blog/Blog";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        <Route
-          path="blog"
-          element={<BlogsLayout />}
-          errorElement={<NotFound />}
-        >
+        <Route path="blog" element={<Blog />} errorElement={<NotFound />}>
           <Route path="add_blog" element={<AddBlog />} />
           <Route path=":id" element={<BlogDetail />} />
           <Route path="update_blog:id" element={<UpdateBlog />} />
         </Route>
-        <Route path="example" element={<Bootstrap />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="about" element={<About />} />
+        <Route path="project" element={<Project />} />
+        <Route path="link" element={<Link />} />
         <Route path="log-in" element={<Login />} />
         <Route path="sign-up" element={<Signup />} />
       </Route>
